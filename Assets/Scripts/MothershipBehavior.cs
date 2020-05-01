@@ -7,6 +7,7 @@ public class MothershipBehavior : MonoBehaviour
     private NavMeshAgent agent;
     private GameObject motherShipGameObject;
     private GameObject portalGameObject;
+    public int healthPoint;
 
     // Start is called before the first frame update
     void Start()
@@ -15,6 +16,7 @@ public class MothershipBehavior : MonoBehaviour
         motherShipGameObject = GameObject.Find("HumanMotherShip");
         portalGameObject = GameObject.Find("Portal");
         agent.destination = portalGameObject.transform.position;
+        healthPoint = 1000;
     }
 
     // Update is called once per frame
